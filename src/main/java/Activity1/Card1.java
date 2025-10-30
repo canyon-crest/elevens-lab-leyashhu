@@ -97,7 +97,8 @@ public class Card1 {
 	@Override
 	public String toString() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return "";
+		
+		return rank + " of " + suit + " (point value = " + pointValue + ")";
 
 	}
 }
