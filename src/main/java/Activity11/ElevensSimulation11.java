@@ -13,7 +13,7 @@ public class ElevensSimulation11 {
 	/**
 	 * Flag used to control debugging print statements.
 	 */
-	private static final boolean I_AM_DEBUGGING = false;
+	protected static final boolean I_AM_DEBUGGING = false;
 
 
 	/**
