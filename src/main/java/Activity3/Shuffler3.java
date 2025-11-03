@@ -9,7 +9,8 @@ public class Shuffler3 {
 	 * to each sorting procedure.
 	 */
 	private static final int SHUFFLE_COUNT = 1;
-
+	int[] values1 = {0, 1, 2, 3}; 
+	int[] values2 = {0, 1, 2, 3};
 
 	/**
 	 * Tests shuffling methods.
@@ -52,6 +53,21 @@ public class Shuffler3 {
 	 */
 	public static void perfectShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		int[] shuffled = new int[values.length];
+		int mid = (values.length + 1) / 2;
+		int k = 0;
+		for (int j = 0; j < mid; j++) {
+		    shuffled[k] = values[j];
+		    k += 2;
+		}
+		k = 1;
+		for (int j = mid; j < values.length; j++) {
+		    shuffled[k] = values[j];
+		    k += 2;
+		}
+		for (int j = 0; j < values.length; j++) {
+		    values[j] = shuffled[j];
+		}
 	}
 
 	/**
@@ -67,5 +83,12 @@ public class Shuffler3 {
 	 */
 	public static void selectionShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		for (int k = values.length - 1; k > 0; k--) {
+		    int r = (int)(Math.random() * (k + 1));
+		    int temp = values[k];
+		    values[k] = values[r];
+		    values[r] = temp;
+		}
+
 	}
 }

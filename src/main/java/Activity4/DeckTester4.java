@@ -1,4 +1,5 @@
 package Activity4;
+
 /**
  * This is a class that tests the Deck class.
  */
@@ -6,12 +7,13 @@ public class DeckTester4 {
 
 	/**
 	 * The main method in this class checks the Deck operations for consistency.
-	 *	@param args is not used.
+	 * 
+	 * @param args is not used.
 	 */
 	public static void main(String[] args) {
-		String[] ranks = {"jack", "queen", "king"};
-		String[] suits = {"blue", "red"};
-		int[] pointValues = {11, 12, 13};
+		String[] ranks = { "jack", "queen", "king" };
+		String[] suits = { "blue", "red" };
+		int[] pointValues = { 11, 12, 13 };
 		Deck4 d = new Deck4(ranks, suits, pointValues);
 
 		System.out.println("**** Original Deck Methods ****");
@@ -53,5 +55,23 @@ public class DeckTester4 {
 		System.out.println();
 
 		/* *** TO BE COMPLETED IN ACTIVITY 4 *** */
+		// 52 card deck
+		String[] ranks52 = { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
+		String[] suits52 = { "Hearts", "Diamonds", "Clubs", "Spades" };
+		int[] values52 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+
+		Deck4 deck = new Deck4(ranks52, suits52, values52);
+
+		// print og
+		System.out.println("=== Original Deck ===");
+		System.out.println(deck);
+
+		// shuffle and print each time shuffle
+		for (int i = 1; i <= 3; i++) {
+			deck.shuffle();
+			System.out.println("=== Deck after shuffle " + i + " ===");
+			System.out.println(deck);
+		}
+
 	}
 }
