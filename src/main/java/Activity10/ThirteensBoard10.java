@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * The ElevensBoard class represents the board in a game of Elevens.
  */
-public class ThirteensBoard extends Board10 {
+public class ThirteensBoard10 extends Board10 {
 
 	/**
 	 * The size (number of cards) on the board.
@@ -37,7 +37,7 @@ public class ThirteensBoard extends Board10 {
 	/**
 	 * Creates a new <code>ElevensBoard</code> instance.
 	 */
-	public ThirteensBoard() {
+	public ThirteensBoard10() {
 		super(BOARD_SIZE, RANKS, SUITS, POINT_VALUES);
 	}
 
